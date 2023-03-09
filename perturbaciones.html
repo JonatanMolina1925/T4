@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Perturbaciones en Tiempo Real</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<header id="encabezado">
+    <fieldset class="centrar">
+        <a href="index.html">Inicio</a>
+        <a href="perturbaciones.html">Perturbaciones</a>
+        <a href="detector.html">Detector Propuesto</a>
+        <a href="acerca.html">Acerca de</a>
+    </fieldset>
+    <fieldset>
+        <h1 class="centrar">Perturbaciones en la energía eléctrica</h1>
+    </fieldset>   
+</header>
+<body>
+    <fieldset>
+        <main id="contenido">
+            <article id="definicion">
+                Una perturbación son los eventos que afectan o deterioran las características de la señal senoidal
+                que debe de tener el suministro eléctrico, las más comunes son: impulsos en el voltaje de línea, ruido, 
+                transitorios, cambio en la magnitud de voltaje en estado estable, o alguna combinación de éstos, y la mayoría 
+                son de duración corta. La IEEE divide las perturbaciones de acuerdo a la siguiente tabla: 
+                <img src="imagenes/IEEE.png" alt="Tabla IEEE" class="centrar" id="tablaIEEE">
+                <figcaption class="centrar" id="tablaIEEE">Categorización de y caracteristicas de las principales perturbaciones en la energía eléctrica.</figcaption>
+                <br>
+                <br>
+                <fieldset id="interrupciones">
+                    <legend>Interrupciones</legend>
+                    <article id="interupp">
+                        Una interrupción (véase figura) es una pérdida completa de voltaje que puede durar desde 0.5
+                        ciclos hasta días, por lo regular se deben a fallas en el sistema eléctrico, accidentes, factores
+                        atmosféricos, caídas de rayos, etc. Se pueden dividir en [38], [40] y [46]:
+                        <br>
+                        <img src="imagenes/interrupcion.png" alt="Interrupción" width="600" height="200" id="inte">
+                        <figcaption class="centrar" id="inte">Forma de onda cuando se presenta una interrupción</figcaption>
+                        <ul>
+                            <li><strong>Interrupciones sostenidas:</strong>Se presentan debido a fallas permanentes en el sistema eléctrico,
+                                su duración es mayor a 1 minuto.</li>
+                            <li><strong>Interrupciones momentáneas: </strong>Por lo regular son para protección por sobrecorriente que se
+                                hacen de forma automática, una vez cortada la corriente se reestablece de forma automática,
+                                su duración es menor a 3 segundos.</li>
+                            <li><strong>Interrupciones temporales: </strong>La duración es mayor a tres segundos y menor a 1 minuto.</li>
+                        </ul>
+                    </article>
+                </fieldset>
+                <br>
+                <fieldset id="v_Transitorios">
+                    <legend>Voltajes Transitorios</legend>
+                    <article id="transitorios">
+                        Son variaciones en la amplitud de la onda de voltaje, regularmente son ocasionados por interruptores,
+                        causas atmosféricas, fallas intermitentes, entre otros, pueden ser de cinco tipos [39], [40], [45] y [46]:
+                        <br>
+                        <ul>
+                            <li><strong>Bajo voltaje <cite>(Undervoltage): </cite></strong>Se presentan debido a fallas permanentes en el sistema eléctrico,
+                                su duración es mayor a 1 minuto.
+                                <br>
+                                <img src="imagenes/undervoltaje.png" alt="Undervoltage" width="600" height="200" id="under">
+                                <figcaption class="centrar" id="under">Forma de onda cuando se presenta un bajo voltaje.</figcaption>                            
+                            </li>
+
+                            <li><strong>Alto voltaje <cite>(Overvoltage): </cite></strong>Aumento de la magnitud del voltaje RMS entre 1.1 y 1.2 pu con
+                                duración de más de 1 minuto.
+                                <img src="imagenes/overvoltaje.png" alt="Overvoltage" width="600" height="200" id="over">
+                                <figcaption class="centrar" id="over">Forma de onda cuando se presenta un alto voltaje.</figcaption>                            
+                            </li>
+
+                            <li><strong><cite>Sag: </cite> </strong>Reducción del voltaje RMS de entre 0.1 y 0.9 pu a frecuencia de operación con duración
+                                entre 0.5 ciclos y 1 minuto.
+                                <br>
+                                <img src="imagenes/sag.png" alt="Sag" width="600" height="200" id="sg">
+                                <figcaption class="centrar" id="sg">Forma de onda cuando se presenta un <cite>Sag</cite>.</figcaption>                            
+                            </li>
+
+                            <li><strong><cite>Swell: </cite></strong>Incremento del voltaje RMS entre 1.1 y 1.8 pu a frecuencia de operación con duración
+                                de entre 0.5 ciclos y 1 minuto.
+                                <br>
+                                <img src="imagenes/swell.png" alt="Swell" width="600" height="200" id="sw">
+                                <figcaption class="centrar" id="sw">Forma de onda cuando se presenta un <cite>Swell</cite>.</figcaption>                            
+                            </li>
+
+                            <li><strong>Hendidura <cite>Notch</cite>: </strong>Disturbio periódico en la forma de onda del voltaje causado por equipos
+                                que conmutan la corriente de una fase a otra, se caracterizan por la disminución en la forma
+                                de onda del voltaje que puede ser de hasta medio ciclo.
+                                <br>
+                                <img src="imagenes/notch.png" alt="Notch" width="600" height="200" id="nt">
+                                <figcaption class="centrar" id="nt">Forma de onda cuando se presenta un <cite>Notch</cite>.</figcaption>                            
+                            </li>                           
+                    </article>
+                </fieldset>
+</main> 
+<footer id="pie">
+    <fieldset>
+        
+        <a href="https://www.morelia.tecnm.mx">Tecnológico Nacional de México Campus Morelia</a>
+        <br>
+        <a href="http://sagitario.itmorelia.edu.mx/pelectron/">Maestría en Ciencias en Ingeniería Electrónica</a>
+        <!-- Agregar hora y fecha -->
+    </fieldset>
+</footer> 
+</body>
+</html>
