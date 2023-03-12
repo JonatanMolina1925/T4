@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Perturbaciones en Tiempo Real</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<header id="encabezado">
+    <fieldset class="centrar">
+        <a href="index.html">Inicio</a>
+        <a href="perturbaciones.html">Perturbaciones</a>
+        <a href="detector.html">Detector Propuesto</a>
+        <a href="acerca.html">Acerca de</a>
+        <a href="formulario.html">Iniciar Sesión</a>
+    </fieldset>
+    <fieldset>
+        <h1 class="centrar">Iniciar Sesión</h1>
+    </fieldset>   
+</header>
+<body>
+    <fieldset id="formulario">
+        Inicia sesión para poder llevar un control sobre el perfil de las personas que visitan el sitio y las instituciones en las que estudian/estudiaron. 
+        <form action="infoUsuario.php" method="get">
+            <article id="usuario">
+                
+                <h2 class="centrar">Información del Usuario</h2>
+                <label for="nombre">Escribe tu nombre completo: </label>        
+                <input type="text" name="nombre" required><span>*</span>
+                <br>
+                <label for="Fecha">Fecha de nacimiento: </label><input type="date" name="Fecha" id="" required><span>*</span>
+                <br>
+                <label for="email">Correo electrónico: </label><input type="email" required="required"><span>*</span>
+                <br>
+                <label for="institucion">Institución en la que estudias/estudiaste: </label> 
+                <input type="text" name="institucion" placeholder="" required><span>*</span>
+                <br>
+                <select name="grado" id="grado" required>
+                    <optgroup>
+                        <option value="Primaria">Primaria</option>
+                        <option value="Secundaria">Secundaria</option>
+                        <option value="Bachillerato">Bachillerato</option>
+                        <option value="Licenciatura">Licenciatura</option>
+                        <option value="Posgrado" selected>Posgrado</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="carrera">Carrera/Posgrado/Bachillerato técnico estudiado: </label>        
+                <input type="text" name="carrera">
+                <br>
+                <h3>Contraseña</h3>
+                <label for="Contra">Contraseña: </label><input type="password" name="contra" id=""><span>*</span>
+                <br>
+                <label for="Contra">Confirma la contraseña: </label><input type="password" name="contra" id=""><span>*</span>
+                <br>
+
+            </article>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </fieldset>
+<footer id="pie">
+    <fieldset>
+        <a href="https://www.morelia.tecnm.mx">Tecnológico Nacional de México Campus Morelia</a>
+        <br>
+        <a href="http://sagitario.itmorelia.edu.mx/pelectron/">Maestría en Ciencias en Ingeniería Electrónica</a>
+    <!-- Agregar hora y fecha -->
+    </fieldset>
+</footer> 
+</body>
+</html>
