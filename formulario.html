@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detector de Perturbaciones en Tiempo Real</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="main.js"></script>
 </head>
-<header id="encabezado">
+<header id="encabezado">   
     <fieldset class="centrar">
-        <a href="index.html">Inicio</a>
-        <a href="perturbaciones.html">Perturbaciones</a>
-        <a href="detector.html">Detector Propuesto</a>
-        <a href="acerca.html">Acerca de</a>
-        <a href="formulario.html">Iniciar Sesión</a>
+        <img src="imagenes/TecNM_logo.png" alt="IT Morelia" id="izquierda" height="100" width="200">
+        <img src="imagenes/Itmorelia.png" alt="IT Morelia" id="derecha" height="100" width="100">
+        <fieldset id="aco">
+            <a href="index.html" class="fuente">Inicio</a>
+            <a href="perturbaciones.html" class="fuente">Perturbaciones</a>
+            <a href="detector.html" class="fuente">Detector Propuesto</a>
+            <a href="acerca.html" class="fuente">Acerca de</a>
+            <a href="formulario.html" class="centrar fuente">Iniciar Sesión</a>
+        </fieldset>       
     </fieldset>
     <fieldset>
         <h1 class="centrar">Iniciar Sesión</h1>
@@ -21,20 +26,23 @@
 </header>
 <body>
     <fieldset id="formulario">
-        Inicia sesión para poder llevar un control sobre el perfil de las personas que visitan el sitio y las instituciones en las que estudian/estudiaron. 
-        <form action="infoUsuario.php" method="get">
+        <form action="formulario.php" name="formulario1">
             <article id="usuario">
                 
                 <h2 class="centrar">Información del Usuario</h2>
-                <label for="nombre">Escribe tu nombre completo: </label>        
-                <input type="text" name="nombre" required><span>*</span>
+                
+                <label for="nombre">Escribe tu nombre(s): </label>        
+                <input type="text" name="nombre" id="nombre"><span>*</span>
                 <br>
+                <label for="apellidos">Escribe tus apellidos: </label>        
+                <input type="text" name="apellidos" id="apellidos"><span>*</span>
+                <br>    
                 <label for="Fecha">Fecha de nacimiento: </label><input type="date" name="Fecha" id="" required><span>*</span>
                 <br>
-                <label for="email">Correo electrónico: </label><input type="email" required="required"><span>*</span>
+                <label for="email">Correo electrónico: </label><input type="email" id="correo"><span>*</span>
                 <br>
                 <label for="institucion">Institución en la que estudias/estudiaste: </label> 
-                <input type="text" name="institucion" placeholder="" required><span>*</span>
+                <input type="text" name="institucion" placeholder="">
                 <br>
                 <select name="grado" id="grado" required>
                     <optgroup>
@@ -50,21 +58,29 @@
                 <input type="text" name="carrera">
                 <br>
                 <h3>Contraseña</h3>
-                <label for="Contra">Contraseña: </label><input type="password" name="contra" id=""><span>*</span>
+                <label for="Contra">Contraseña: </label><input type="password" name="contra1" id="contra1"
+                pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$"
+                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Debe contener entre 8 y 16 caracteres: Dígitos, minúsculas, mayúsculas y símbolos' : '')
+                if(this.checkValidity()) form.contra2.pattern = this.value">
+                
+                <span>*</span>
                 <br>
-                <label for="Contra">Confirma la contraseña: </label><input type="password" name="contra" id=""><span>*</span>
+                <label for="Contra">Confirma la contraseña: </label><input type="password" name="contra2" id="contra2"
+                pattern="^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$"
+                onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Repite la contraseña ingresada' : '')">
+                <span>*</span>
                 <br>
 
             </article>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpiar">
+            <input type="button" value="Enviar" id="enviar" onclick="verificarNombre()">
+            <input type="reset" value="Limpiar" id="Limpiar">
         </form>
     </fieldset>
-<footer id="pie">
-    <fieldset>
-        <a href="https://www.morelia.tecnm.mx">Tecnológico Nacional de México Campus Morelia</a>
+<footer id="pie" >
+    <fieldset class="centrar">
+        <a href="https://www.morelia.tecnm.mx" class="fuente">Tecnológico Nacional de México Campus Morelia</a>
         <br>
-        <a href="http://sagitario.itmorelia.edu.mx/pelectron/">Maestría en Ciencias en Ingeniería Electrónica</a>
+        <a href="http://sagitario.itmorelia.edu.mx/pelectron/" class="fuente">Maestría en Ciencias en Ingeniería Electrónica</a>
     <!-- Agregar hora y fecha -->
     </fieldset>
 </footer> 

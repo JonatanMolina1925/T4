@@ -9,11 +9,15 @@
 </head>
 <header id="encabezado">
     <fieldset class="centrar">
-        <a href="index.html">Inicio</a>
-        <a href="perturbaciones.html">Perturbaciones</a>
-        <a href="detector.html">Detector Propuesto</a>
-        <a href="acerca.html">Acerca de</a>
-        <a href="formulario.html">Iniciar Sesión</a>
+        <img src="imagenes/TecNM_logo.png" alt="IT Morelia" id="izquierda" height="100" width="200">
+        <img src="imagenes/Itmorelia.png" alt="IT Morelia" id="derecha" height="100" width="100">
+        <fieldset id="aco">
+            <a href="index.html" class="fuente">Inicio</a>
+            <a href="perturbaciones.html" class="fuente">Perturbaciones</a>
+            <a href="detector.html" class="fuente">Detector Propuesto</a>
+            <a href="acerca.html" class="fuente">Acerca de</a>
+            <a href="formulario.html" class="centrar fuente">Iniciar Sesión</a>
+        </fieldset>       
     </fieldset>
     <fieldset>
         <h1 class="centrar">Perturbaciones en la energía eléctrica</h1>
@@ -27,8 +31,9 @@
                 que debe de tener el suministro eléctrico, las más comunes son: impulsos en el voltaje de línea, ruido, 
                 transitorios, cambio en la magnitud de voltaje en estado estable, o alguna combinación de éstos, y la mayoría 
                 son de duración corta. La IEEE divide las perturbaciones de acuerdo a la siguiente tabla: 
-                <img src="imagenes/IEEE.png" alt="Tabla IEEE" class="centrar" id="tablaIEEE">
-                <figcaption class="centrar" id="tablaIEEE">Categorización de y caracteristicas de las principales perturbaciones en la energía eléctrica.</figcaption>
+                <figure class="centrar"><img src="imagenes/IEEE.png" alt="Tabla IEEE" id="tablaIEEE"></figure>
+                    <figcaption class="centrar" id="tablaIEEE">Categorización de y caracteristicas de las principales perturbaciones en la energía eléctrica.</figcaption>
+            </article>
                 <br>
                 <br>
                 <fieldset id="interrupciones">
@@ -38,7 +43,7 @@
                         ciclos hasta días, por lo regular se deben a fallas en el sistema eléctrico, accidentes, factores
                         atmosféricos, caídas de rayos, etc. Se pueden dividir en [1], [2] y [3]:
                         <br>
-                        <img src="imagenes/interrupcion.png" alt="Interrupción" width="600" height="200" id="inte">
+                        <figure class="centrar"><img src="imagenes/interrupcion.png" alt="Interrupción" width="600" height="200" id="inte"></figure>
                         <figcaption class="centrar" id="inte">Forma de onda cuando se presenta una interrupción</figcaption>
                         <ul>
                             <li><strong>Interrupciones sostenidas:</strong>Se presentan debido a fallas permanentes en el sistema eléctrico,
@@ -61,7 +66,8 @@
                             <li><strong>Bajo voltaje <cite>(Undervoltage): </cite></strong>Se presentan debido a fallas permanentes en el sistema eléctrico,
                                 su duración es mayor a 1 minuto.
                                 <br>
-                                <img src="imagenes/undervoltaje.png" alt="Undervoltage" width="600" height="200" id="under">
+                                <figure class="centrar"><img src="imagenes/undervoltaje.png" alt="Undervoltage" width="600" height="200" id="under"></figure>
+                                
                                 <figcaption class="centrar" id="under">Forma de onda cuando se presenta un bajo voltaje.</figcaption>   
                                 <br>                          
                             </li>
@@ -69,7 +75,8 @@
                             <li><strong>Alto voltaje <cite>(Overvoltage): </cite></strong>Aumento de la magnitud del voltaje RMS entre 1.1 y 1.2 pu con
                                 duración de más de 1 minuto.
                                 <br>
-                                <img src="imagenes/overvoltaje.png" alt="Overvoltage" width="600" height="200" id="over">
+                                <figure class="centrar"><img src="imagenes/overvoltaje.png" alt="Overvoltage" width="600" height="200" id="over"></figure>
+                                
                                 <figcaption class="centrar" id="over">Forma de onda cuando se presenta un alto voltaje.</figcaption> 
                                 <br>                            
                             </li>
@@ -77,7 +84,8 @@
                             <li><strong><cite>Sag: </cite> </strong>Reducción del voltaje RMS de entre 0.1 y 0.9 pu a frecuencia de operación con duración
                                 entre 0.5 ciclos y 1 minuto.
                                 <br>
-                                <img src="imagenes/sag.png" alt="Sag" width="600" height="200" id="sg">
+                                <figure class="centrar"><img src="imagenes/sag.png" alt="Sag" width="600" height="200" id="sg"></figure>
+                                
                                 <figcaption class="centrar" id="sg">Forma de onda cuando se presenta un <cite>Sag</cite>.</figcaption>  
                                 <br>                           
                             </li>
@@ -85,7 +93,8 @@
                             <li><strong><cite>Swell: </cite></strong>Incremento del voltaje RMS entre 1.1 y 1.8 pu a frecuencia de operación con duración
                                 de entre 0.5 ciclos y 1 minuto.
                                 <br>
-                                <img src="imagenes/swell.png" alt="Swell" width="600" height="200" id="sw">
+                                <figure class="centrar"><img src="imagenes/swell.png" alt="Swell" width="600" height="200" id="sw"></figure>
+                                
                                 <figcaption class="centrar" id="sw">Forma de onda cuando se presenta un <cite>Swell</cite>.</figcaption>  
                                 <br>                           
                             </li>
@@ -94,7 +103,8 @@
                                 que conmutan la corriente de una fase a otra, se caracterizan por la disminución en la forma
                                 de onda del voltaje que puede ser de hasta medio ciclo.
                                 <br>
-                                <img src="imagenes/notch.png" alt="Notch" width="600" height="200" id="nt">
+                                <figure class="centrar"><img src="imagenes/notch.png" alt="Notch" width="600" height="200" id="nt"></figure>
+                                
                                 <figcaption class="centrar" id="nt">Forma de onda cuando se presenta un <cite>Notch</cite>.</figcaption>
                                 <br>                            
                             </li>                           
@@ -118,7 +128,8 @@
                             propagan, para su estudio se considera que aparecen al mismo tiempo en todos los lugares,
                             pero con parámetros diferentes, ya que su energía disminuye con la distancia [6].
                                 <br>
-                                <img src="imagenes/impulso.png" alt="Impulso" width="600" height="200" id="imp">
+                                <figure class="centrar"><img src="imagenes/impulso.png" alt="Impulso" width="600" height="200" id="imp"></figure>
+                                
                                 <figcaption class="centrar" id="imp">Forma de onda cuando se presenta un impulso.</figcaption>   
                                 <br>                          
                             </li>
@@ -126,7 +137,8 @@
                             <li><strong>Oscilatorio: </strong>Son eventos repentinos en los que se produce un cambio de
                                 polaridades de forma alternada y rápida, ya sea de voltaje, corriente o ambas.
                                 <br>
-                                <img src="imagenes/oscilatorio.png" alt="Oscilatorio" width="600" height="200" id="Osc">
+                                <figure class="centrar"><img src="imagenes/oscilatorio.png" alt="Oscilatorio" width="600" height="200" id="Osc"></figure>
+                                
                                 <figcaption class="centrar" id="Osc">Forma de onda cuando se presenta un oscilatorio.</figcaption> 
                                 <br>                            
                             </li>
@@ -145,7 +157,8 @@
                     por usuarios que conectan cargas no lineales al sistema, si los armónicos llegan a una cierta magnitud
                     pueden llegar a dañar los aparatos eléctricos [2] y [4].
                     <br>
-                        <img src="imagenes/armonico.png" alt="Armónico" width="600" height="200" id="arm">
+                    <figure class="centrar"><img src="imagenes/armonico.png" alt="Armónico" width="600" height="200" id="arm"></figure>
+                        
                         <figcaption class="centrar" id="arm">Forma de onda con distorsión armónica.</figcaption>   
                     <br>  
                 </fieldset>
@@ -165,7 +178,8 @@
                     Son señales eléctricas no deseadas, a frecuencias menores de 200 kHz y que se superponen sobre la
                     forma de onda de voltaje o corriente, en la figura 2.14 se muestra una forma de onda con ruido [5]
                     <br>
-                        <img src="imagenes/ruido.png" alt="Ruido" width="400" height="200" id="rd">
+                    <figure class="centrar"><img src="imagenes/ruido.png" alt="Ruido" width="400" height="200" id="rd"></figure>
+                        
                         <figcaption class="centrar" id="rd">Forma de onda con ruido.</figcaption>   
                     <br>  
                 </fieldset>
@@ -203,7 +217,8 @@
                         
                     </ul>
                     <br>
-                        <img src="imagenes/fluctuaciones.png" alt="Fluctuaciones" width="400" height="300" id="ft">
+                    <figure class="centrar"><img src="imagenes/fluctuaciones.png" alt="Fluctuaciones" width="400" height="300" id="ft"></figure>
+                        
                         <figcaption class="centrar" id="ft">Tipos de fluctuaciones de voltaje.</figcaption>   
                     <br>  
                 </fieldset>
@@ -251,11 +266,11 @@
                 </fieldset>
 </main> 
 <footer id="pie">
-    <fieldset>
+    <fieldset class="centrar">
         
-        <a href="https://www.morelia.tecnm.mx">Tecnológico Nacional de México Campus Morelia</a>
+        <a href="https://www.morelia.tecnm.mx" class="fuente">Tecnológico Nacional de México Campus Morelia</a>
         <br>
-        <a href="http://sagitario.itmorelia.edu.mx/pelectron/">Maestría en Ciencias en Ingeniería Electrónica</a>
+        <a href="http://sagitario.itmorelia.edu.mx/pelectron/" class="fuente">Maestría en Ciencias en Ingeniería Electrónica</a>
         <!-- Agregar hora y fecha -->
     </fieldset>
 </footer> 
