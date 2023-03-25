@@ -1,18 +1,29 @@
 function verificarContra(){
-    var pass = document.getElementById("contra1").value;
-    var conpass = document.getElementById("contra2").value;
-
-    if(pass !='' && conpass !=''){
-        if (pass != conpass) {
-            alert("Las contraseñas deben de coincidir.");
-            return false;
-        } else {
-            alert("Las contraseñas coinciden.");
-            document.formulario1.submit();
-            return true; 
+    var caracContra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    var pass = document.getElementById("contra1");
+    var conpass = document.getElementById("contra2");
+    alert
+    if(pass.value && conpass.value){
+        if (caracContra.test(pass.value) && caracContra.test(conpass.value))
+        {
+            if (pass.value != conpass.value) {
+                alert("Las contraseñas deben de coincidir.");
+                return false;
+            } else {
+                alert("Las contraseñas coinciden.");
+                document.formulario1.submit();
+                return true; 
+            }
+            
         }
-    } else {
-        alert("Ingresa una contraseña, por favor.")
+        else{
+            alert("El campo contraseña no admite espacios, caracteres con acentos ni ñ.")
+            alert("La contraseña debe tenr una longitud de 8 a 16 caracteres, con al menos una mayúscula, una minúscula y un número")
+            pass.focus();
+            return false;
+        }  
+    } else{
+        alert("Escribe una contraseña y confírmala.")
         return false;
     }
 }
