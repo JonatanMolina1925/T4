@@ -4,17 +4,23 @@
     background-color:antiquewhite;
 }
 
+#portada{
+    display: flex;
+    justify-content: space-between;
+}
 
 #aco{
-    position: static;
-    top: 100px;
-    left: 25%;
-    border-left: 3px antiquewhite;
-    border-right: 3px antiquewhite;
-    border-bottom: 3px antiquewhite;
-    border-top: 3px antiquewhite;
-
+    display: flex;
+    padding-left: 0%;
+    margin-top: 2%;
+    background-color: antiquewhite;
+    border-top: antiquewhite;
+    border-left: antiquewhite;
+    border-right: antiquewhite;
+    border-bottom: antiquewhite;
+    justify-content: space-around;
 }
+
 #pie{
     border-radius: 3px;
     background-color:antiquewhite;
@@ -23,13 +29,14 @@
 
 #derecha{
     float: right;
-    /* width: 30%; */
+    width: 100px;
+    
     background-color: antiquewhite;
 }
 
 #izquierda{
     float: left;
-    /* width: 30%; */
+    width: 200px;
     background-color: antiquewhite;
 }
 
@@ -38,6 +45,6 @@
 }
 
 .fuente{
-    font-size: 15pt;
+    font-size: 14pt;
     color: black;
 }
